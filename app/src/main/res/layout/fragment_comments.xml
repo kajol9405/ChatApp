@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chatsLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:longClickable="true"
+    android:paddingBottom="@dimen/very_small_sized_margin_padding"
+    android:paddingLeft="@dimen/small_sized_margin_padding"
+    android:paddingRight="@dimen/small_sized_margin_padding"
+    android:paddingTop="@dimen/very_small_sized_margin_padding">
+
+    <TextView
+        android:id="@+id/chatsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_sized_margin_padding"
+        android:layout_marginTop="@dimen/small_sized_margin_padding"
+        android:text="This is my first chat app message"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_sized_fonts" />
+
+
+    <TextView
+        android:id="@+id/chatsTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chatsMessage"
+        android:layout_marginLeft="@dimen/small_sized_margin_padding"
+        android:layout_marginTop="@dimen/very_small_sized_margin_padding"
+        android:gravity="end"
+        android:text="17 mins ago"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_sized_fonts" />
+
+
+</RelativeLayout>
+

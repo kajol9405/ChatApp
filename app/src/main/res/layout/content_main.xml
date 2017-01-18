@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/chatHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint=" Chats "
+        android:maxHeight="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/chatsBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <EditText
+            android:id="@+id/chatsBox"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/chat"
+            android:hint="   Type to chat "
+            android:inputType="textCapSentences"
+            android:maxHeight="@dimen/medium_sized_margin_padding"
+            android:padding="@dimen/small_sized_margin_padding" />
+
+        <Button
+            android:id="@+id/sendMessage"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/very_small_sized_margin_padding"
+            android:layout_weight="0.5"
+            android:background="@drawable/border_btn_login"
+            android:padding="@dimen/very_small_sized_margin_padding"
+            android:text="SEND"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chatsBoxLayout"
+        android:layout_below="@+id/chatHeader"
+        android:fadeScrollbars="true"
+        android:scrollbars="vertical" />
+
+
+</RelativeLayout>
